@@ -1,9 +1,9 @@
-
 from orchidCli import cli
 from roseUtils import common
 from roseUtils.common import style
 
 if __name__ == "__main__":
+
 	cursor = style.yellow + " $ " + style.reset
 	command = ""
 	print("Blooming Boxes Utilities [Alpha 1]")
@@ -17,8 +17,10 @@ if __name__ == "__main__":
 		elif command in ["clear", "cls"]:
 			common.clear()
 
-		elif command == "menu":
-			cli.menu.renderer()
+		elif command in ["menu", "m"]:
+			while True:
+				common.clear()
+				cli.render_bg()
 
 		else:
 			print(style.red + "Command not found" + style.reset)
