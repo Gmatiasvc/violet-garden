@@ -1,8 +1,9 @@
 from orchidCli import cli
 from roseUtils import common
 from roseUtils.common import style
+from roseUtils.math.parser import lexer
 
-if __name__ == "__main__":
+if __name__ == "_main__":
 
 	cursor = style.yellow + " $ " + style.reset
 	command = ""
@@ -24,3 +25,6 @@ if __name__ == "__main__":
 
 		else:
 			print(style.red + "Command not found" + style.reset)
+
+if __name__ == "__main__":
+	lexer("(")
