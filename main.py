@@ -1,7 +1,7 @@
 from orchidCli import cli
 from roseUtils import common
 from roseUtils.common import style
-from roseUtils.math.parser import lexer
+from roseUtils.math.calculator import lexer, parser
 
 if __name__ == "_main__":
 
@@ -27,4 +27,4 @@ if __name__ == "_main__":
 			print(style.red + "Command not found" + style.reset)
 
 if __name__ == "__main__":
-	lexer("(")
+	print(parser(lexer("(12+34)*56-78/90")))
